@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SanHak">
         <activity
+            android:name=".Search"
+            android:exported="false" />
+        <activity
+            android:name=".LoadingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Loading"
+            android:exported="false" />
+        <activity
+            android:name=".MyBrand"
+            android:exported="false" />
+        <activity
             android:name=".MyMain"
             android:exported="false" />
         <activity

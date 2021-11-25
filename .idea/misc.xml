@@ -3,13 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/andoridApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.12916666666666668" />
         <entry key="..\:/andoridApp/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.12916666666666668" />
+        <entry key="..\:/andoridApp/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.12916666666666668" />
+        <entry key="..\:/andoridApp/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.12916666666666668" />
+        <entry key="..\:/andoridApp/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.12916666666666668" />
+        <entry key="..\:/andoridApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.12916666666666668" />
+        <entry key="..\:/andoridApp/app/src/main/res/layout/activity_loading.xml" value="0.1" />
         <entry key="..\:/andoridApp/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/andoridApp/app/src/main/res/layout/activity_main2.xml" value="0.11302083333333333" />
         <entry key="..\:/andoridApp/app/src/main/res/layout/activity_main_center.xml" value="0.11302083333333333" />
+        <entry key="..\:/andoridApp/app/src/main/res/layout/activity_my_brand.xml" value="0.16" />
         <entry key="..\:/andoridApp/app/src/main/res/layout/activity_my_list.xml" value="0.11302083333333333" />
         <entry key="..\:/andoridApp/app/src/main/res/layout/activity_my_main.xml" value="0.264" />
-        <entry key="..\:/andoridApp/app/src/main/res/layout/activity_my_page.xml" value="0.11302083333333333" />
+        <entry key="..\:/andoridApp/app/src/main/res/layout/activity_my_page.xml" value="0.4" />
+        <entry key="..\:/andoridApp/app/src/main/res/layout/activity_search.xml" value="0.11302083333333333" />
         <entry key="..\:/andoridApp/app/src/main/res/menu/bottom_menu.xml" value="0.22916666666666666" />
         <entry key="..\:/andoridApp/app/src/main/res/menu/top_menu.xml" value="0.22916666666666666" />
       </map>
