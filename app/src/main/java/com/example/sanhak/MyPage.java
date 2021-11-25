@@ -18,7 +18,8 @@ public class MyPage extends Fragment {
 
     private View view;
     private Button btn_myBrand;
-
+    private Button button3;//로그인
+    private Button button8;//회원가입
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -34,6 +35,33 @@ public class MyPage extends Fragment {
                 MyBrand myBrand = new MyBrand();
                 //myBrand.setArguments(bundle);
                 transaction.replace(R.id.main_frame, myBrand);
+                transaction.commit();
+            }
+        });
+        button3 = view.findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {     //로그인이동
+            @Override
+            public void onClick(View v) {
+                /*Bundle bundle = new Bundle();
+                //bundle.putString();*/
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                Login login = new Login();
+                //myBrand.setArguments(bundle);
+                transaction.replace(R.id.main_frame, login);
+                transaction.commit();
+            }
+        });
+
+        button8 = view.findViewById(R.id.button8);
+        button8.setOnClickListener(new View.OnClickListener() {     //로그인이동
+            @Override
+            public void onClick(View v) {
+                /*Bundle bundle = new Bundle();
+                //bundle.putString();*/
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                Login login = new Login();
+                //myBrand.setArguments(bundle);
+                transaction.replace(R.id.main_frame, login);
                 transaction.commit();
             }
         });
