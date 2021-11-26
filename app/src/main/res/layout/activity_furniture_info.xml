@@ -6,13 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".FurnitureInfo">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="154dp"
-        android:layout_height="147dp"
-        android:src="@tools:sample/avatars"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="76dp" />
+
 
     <TextView
         android:id="@+id/textView7"
@@ -22,6 +16,14 @@
         android:textSize="24sp"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="250dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="120dp"
+        android:layout_height="165dp"
+        android:src="@drawable/ic_baseline_home_24"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="58dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
