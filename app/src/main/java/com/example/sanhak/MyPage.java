@@ -26,7 +26,7 @@ public class MyPage extends Fragment {
         view = inflater.inflate(R.layout.activity_my_page,container, false);
 
         btn_myBrand = view.findViewById(R.id.btn_myBrand);
-        btn_myBrand.setOnClickListener(new View.OnClickListener() {     //즐겨찾는 브랜드이동
+        btn_myBrand.setOnClickListener(new View.OnClickListener(){     //즐겨찾는 브랜드이동
             @Override
             public void onClick(View v) {
                 /*Bundle bundle = new Bundle();
@@ -34,10 +34,12 @@ public class MyPage extends Fragment {
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 MyBrand myBrand = new MyBrand();
                 //myBrand.setArguments(bundle);
+                transaction.addToBackStack(null);
                 transaction.replace(R.id.main_frame, myBrand);
+
                 transaction.commit();
             }
-        });
+            });
         button3 = view.findViewById(R.id.button3);
         button3.setOnClickListener(new View.OnClickListener() {     //로그인이동
             @Override
@@ -47,7 +49,9 @@ public class MyPage extends Fragment {
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 Login login = new Login();
                 //myBrand.setArguments(bundle);
+                transaction.addToBackStack(null);
                 transaction.replace(R.id.main_frame, login);
+
                 transaction.commit();
             }
         });
@@ -61,7 +65,9 @@ public class MyPage extends Fragment {
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 Login login = new Login();
                 //myBrand.setArguments(bundle);
+                transaction.addToBackStack(null);
                 transaction.replace(R.id.main_frame, login);
+
                 transaction.commit();
             }
         });

@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/hjh34/git/SanHak_AR_furniture-/app/src/main/res/layout/activity_furniture_info.xml" value="0.490036231884058" />
+        <entry key="..\:/Users/hjh34/git/SanHak_AR_furniture-/app/src/main/res/layout/activity_item_filter.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/hjh34/git/SanHak_AR_furniture-/app/src/main/res/layout/activity_loading.xml" value="0.401268115942029" />
+        <entry key="..\:/Users/hjh34/git/SanHak_AR_furniture-/app/src/main/res/layout/activity_login.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/hjh34/git/SanHak_AR_furniture-/app/src/main/res/layout/activity_main.xml" value="0.2674772036474164" />
+        <entry key="..\:/Users/hjh34/git/SanHak_AR_furniture-/app/src/main/res/layout/activity_my_brand.xml" value="0.32864583333333336" />
+        <entry key="..\:/Users/hjh34/git/SanHak_AR_furniture-/app/src/main/res/layout/activity_my_list.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/hjh34/git/SanHak_AR_furniture-/app/src/main/res/layout/activity_my_main.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/hjh34/git/SanHak_AR_furniture-/app/src/main/res/layout/activity_my_page.xml" value="0.3265625" />
+        <entry key="..\:/Users/hjh34/git/SanHak_AR_furniture-/app/src/main/res/menu/bottom_menu.xml" value="0.3265625" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.121875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/drawable-v24/loading.xml" value="0.121875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/drawable/ic_launcher_background.xml" value="0.121875" />

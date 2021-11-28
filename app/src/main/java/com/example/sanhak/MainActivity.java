@@ -68,15 +68,18 @@ public class MainActivity extends AppCompatActivity {
         ft = fm.beginTransaction();
         switch (n){
             case 0:
+                ft.addToBackStack(null);
                 ft.replace(R.id.main_frame, myMain);
                 ft.commit();
                 break;
 
             case 1:
+                ft.addToBackStack(null);
                 ft.replace(R.id.main_frame, myList);
                 ft.commit();
                 break;
             case 2:
+                ft.addToBackStack(null);
                 ft.replace(R.id.main_frame, myPage);
                 ft.commit();
                 break;

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "570958792716",
+    "project_id": "sanhak-8c224",
+    "storage_bucket": "sanhak-8c224.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570958792716:android:90a45767473a67a8714629",
+        "android_client_info": {
+          "package_name": "com.example.sanhak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "570958792716-15fe0ktct6d5venvu9lcp45vpvknhmi1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sanhak",
+            "certificate_hash": "1435f5f648a8d1706fc60c8236a2dd36dd1372af"
+          }
+        },
+        {
+          "client_id": "570958792716-gh4hp94ibsc7136rdbtun2v40ign8rr3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP3ObZHJxw9WtkJiHQzOET0ZBk8W8s77M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "570958792716-gh4hp94ibsc7136rdbtun2v40ign8rr3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
