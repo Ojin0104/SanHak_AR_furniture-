@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SanHak">
         <activity
+            android:name=".LoginResult"
+            android:exported="false" />
+        <activity
             android:name=".RecyclerSelectItem"
             android:exported="false" />
         <activity

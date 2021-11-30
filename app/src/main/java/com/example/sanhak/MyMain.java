@@ -25,6 +25,7 @@ public class MyMain extends Fragment {
 
 
 
+
         button2 = view.findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {     //가구선택창
             @Override
