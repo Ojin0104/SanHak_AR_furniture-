@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
                             .thenAccept(modelRenderable -> add(anchor, modelRenderable))
                             .exceptionally(throwable -> {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                                builder.setMessage("Something is not right" + throwable.getMessage()).show();
+                                builder.setMessage("Somthing is not right" + throwable.getMessage()).show();
                                 return null;
                             });
                 }
