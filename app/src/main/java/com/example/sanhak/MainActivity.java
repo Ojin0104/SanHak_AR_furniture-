@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
                 if (clickNo == 1) {
                     Anchor anchor = hitResult.createAnchor();
                     ModelRenderable.builder()
-                            .setSource(this, R.raw.gladiador)
+                            .setSource(this, R.raw.futon)
                             .setIsFilamentGltf(true)
                             .build()
                             .thenAccept(modelRenderable -> add(anchor, modelRenderable))
