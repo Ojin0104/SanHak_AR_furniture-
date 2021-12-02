@@ -15,6 +15,9 @@
             android:name=".LoginResult"
             android:exported="false" />
         <activity
+            android:name=".Select_Recycler_Adapter"
+            android:exported="false" />
+        <activity
             android:name=".RecyclerSelectItem"
             android:exported="false" />
         <activity
