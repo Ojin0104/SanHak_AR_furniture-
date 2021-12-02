@@ -29,6 +29,10 @@ import java.util.ArrayList;
 public class ShopActivity extends Fragment implements ItemClickListener{
     private static  String COLOR_BLACK="검정색";
     private static  String COLOR_GRAY="회색";
+    private static  String COLOR_TREE="나무";
+    private static  String COLOR_GREEN="초록색";
+    private static  String COLOR_WHITE="하얀색";
+
 
     private FirebaseDatabase mDatabase;
     private DatabaseReference databaseReference;
@@ -45,7 +49,7 @@ public class ShopActivity extends Fragment implements ItemClickListener{
 
     private ItemAdapter iAdapter;
     private TypeAdapter tAdapter;
-    private String[] tData={"검정색","회색"};
+    private String[] tData={"검정색","회색","나무","초록색","하얀색"};
    private ArrayList<Item> iData=new ArrayList<>();
     private ArrayList<Item> pData=new ArrayList<>();
    // private GetItemDB getItem;
@@ -59,7 +63,7 @@ private View view;
 
 
         mDatabase = FirebaseDatabase.getInstance();
-        databaseReference = mDatabase.getReference("Item");
+        databaseReference = mDatabase.getReference("Item");//데이터 베이스 Item참조
 
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -71,7 +75,7 @@ private View view;
                     arrayList.add(item);
 
                 }
-iAdapter.notifyDataSetChanged();
+            iAdapter.notifyDataSetChanged();//iAdapter에 값전달
             }
 
             @Override
@@ -88,7 +92,7 @@ iAdapter.notifyDataSetChanged();
         return view;
     }
 
-    private void showTypeSelector(){
+    private void showTypeSelector(){//위에 필터 보여주는 부분
 
         LinearLayoutManager layoutManager=new LinearLayoutManager(getContext());
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
@@ -124,7 +128,7 @@ iAdapter.notifyDataSetChanged();
     }
 
     @Override
-    public void onItemClick(View v, int position) {
+    public void onItemClick(View v, int position) {//filter 클릭시 그에맞는 product show
         String type = String.valueOf(((TextView)(v.findViewById(R.id.typeSelectTv))).getText());
 
         if(type.equals(COLOR_BLACK)) {
@@ -132,10 +136,21 @@ iAdapter.notifyDataSetChanged();
         } else if(type.equals(COLOR_GRAY)) {
             showProduct(type);
 
-    }}
+    }
+        else if(type.equals(COLOR_TREE)) {
+            showProduct(type);
+
+        }
+        else if(type.equals(COLOR_GREEN)) {
+            showProduct(type);
+
+        }else if(type.equals(COLOR_WHITE)) {
+            showProduct(type);
+
+        }}
 
 
-        public ArrayList<Item> GetCOLORList(String color){
+        public ArrayList<Item> GetCOLORList(String color){//색깔에 맞는 데이터 colorList로 전달
         for(int i=0; i<arrayList.size();i++){
 if (arrayList.get(i).getColor().equals(color)){
     colorList.add(arrayList.get(i));

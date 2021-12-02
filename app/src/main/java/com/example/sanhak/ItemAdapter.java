@@ -23,7 +23,7 @@ private ArrayList<Item> arrayList;
 
     public ItemAdapter(ArrayList<Item> arrayList, ItemClickListener listener) {
         this.arrayList = arrayList;
-this.listener=listener;
+    this.listener=listener;
 
     }
 
@@ -36,7 +36,7 @@ this.listener=listener;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull itemViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull itemViewHolder holder, int position) {//그림이랑 데이터값 가져와줌
         Item item=arrayList.get(position);
         Glide.with(holder.itemView)
                 .load(item.getImg())

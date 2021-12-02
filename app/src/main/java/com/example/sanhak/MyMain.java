@@ -34,6 +34,7 @@ public class MyMain extends Fragment {
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 ShopActivity shop= new ShopActivity();
                 transaction.addToBackStack(null);
+
                 transaction.replace(R.id.main_frame, shop);
 
                 transaction.commit();
