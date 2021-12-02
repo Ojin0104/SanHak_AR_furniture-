@@ -11,45 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SanHak">
-        <activity
-            android:name=".LoginResult"
-            android:exported="false" />
-        <activity
-            android:name=".Select_Recycler_Adapter"
-            android:exported="false" />
-        <activity
-            android:name=".RecyclerSelectItem"
-            android:exported="false" />
-        <activity
-            android:name=".ItemFilter"
-            android:exported="false" />
-        <activity
-            android:name=".FurnitureInfo"
-            android:exported="false" />
-        <activity
-            android:name=".Login"
-            android:exported="false" />
-        <activity
-            android:name=".Search"
-            android:exported="false" />
+
+
+
         <activity
             android:name=".LoadingActivity"
             android:exported="false" />
-        <activity
-            android:name=".Loading"
-            android:exported="false" />
-        <activity
-            android:name=".MyBrand"
-            android:exported="false" />
-        <activity
-            android:name=".MyMain"
-            android:exported="false" />
-        <activity
-            android:name=".MyPage"
-            android:exported="false" />
-        <activity
-            android:name=".MyList"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -59,6 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713"/>
     </application>
 
 </manifest>

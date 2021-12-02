@@ -8,6 +8,8 @@ public class Item {
     private String type;
     private String url;
 
+    public Item(){}
+
     public Item(String id, String name, String img, String color, String type, String url) {
         this.id = id;
         this.name = name;

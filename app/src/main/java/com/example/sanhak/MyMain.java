@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,12 +31,14 @@ public class MyMain extends Fragment {
         button2.setOnClickListener(new View.OnClickListener() {     //가구선택창
             @Override
             public void onClick(View v) {
-
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                RecyclerSelectItem selectItem = new RecyclerSelectItem();
+                ShopActivity shop= new ShopActivity();
+                transaction.addToBackStack(null);
+                transaction.replace(R.id.main_frame, shop);
 
-                transaction.replace(R.id.main_frame, selectItem);
                 transaction.commit();
+//                Intent intent = new Intent(getActivity(),ShopActivity.class);
+//                startActivity(intent);
             }
         });
         return view;
