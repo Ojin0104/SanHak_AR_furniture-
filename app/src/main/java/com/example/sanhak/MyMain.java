@@ -13,6 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.bumptech.glide.Glide;
+
+import java.util.ArrayList;
+
 public class MyMain extends Fragment {
 
     private View view;
@@ -22,6 +26,7 @@ public class MyMain extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_my_main,container, false);
+
 
 
 
