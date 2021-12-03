@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="24dp"
         android:text="소파"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button6" />
@@ -84,11 +84,55 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="252dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="260dp"
         android:text="테이블"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="128dp"
+        android:src="@drawable/table1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="128dp"
+        android:src="@drawable/table2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView9" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/sofa1"
+        app:layout_constraintBottom_toTopOf="@+id/imageView9"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/sofa2"
+        app:layout_constraintBottom_toTopOf="@+id/imageView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

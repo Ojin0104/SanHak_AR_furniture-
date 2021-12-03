@@ -8,13 +8,26 @@ public class Item {
     private String type;
     private String url;
 
-    public Item(String id, String name, String img, String color, String type, String url) {
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    private String brand;
+
+    public Item(){}
+
+    public Item(String id, String name, String img, String color, String type, String url,String brand) {
         this.id = id;
         this.name = name;
         this.img = img;
         this.color = color;
         this.type = type;
         this.url = url;
+        this.brand=brand;
     }
 
     public String getId() {
