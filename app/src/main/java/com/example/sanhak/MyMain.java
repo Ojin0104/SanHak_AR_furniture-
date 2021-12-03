@@ -21,6 +21,7 @@ public class MyMain extends Fragment {
 
     private View view;
     private Button button2;//소파버튼
+    private Button arTest;
 
     @Nullable
     @Override
@@ -47,6 +48,18 @@ public class MyMain extends Fragment {
 //                startActivity(intent);
             }
         });
+
+        arTest = view.findViewById(R.id.arTest);
+        arTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), GltfActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
         return view;
     }
 }

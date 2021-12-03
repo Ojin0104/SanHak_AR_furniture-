@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 
 public class LoadingActivity extends AppCompatActivity {
 
@@ -15,7 +16,7 @@ public class LoadingActivity extends AppCompatActivity {
     }
 
     private void startLoading() {
-        Handler handler = new Handler();
+        Handler handler = new Handler(Looper.getMainLooper());
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
