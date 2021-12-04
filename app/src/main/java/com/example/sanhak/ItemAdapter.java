@@ -1,5 +1,6 @@
 package com.example.sanhak;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -45,6 +47,11 @@ private ArrayList<Item> arrayList;
         holder.item_name.setText(item.getName());
 
 
+        final int index = position;
+        holder.imageView.setOnClickListener(v -> {
+            listener.onItemClick2(v, index);
+        });
+
     }
 //    public void updateData(ArrayList<Item> data){
 //        this.arrayList=data;
@@ -73,6 +80,7 @@ private ArrayList<Item> arrayList;
             super(itemView);
             this.imageView=itemView.findViewById(R.id.imageView);
             this.item_name=itemView.findViewById(R.id.item_name);
+
 
         }
     }
