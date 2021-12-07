@@ -10,8 +10,8 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#19D621"
-        android:backgroundTint="#19D621"
+        android:background="#90B1B4C8"
+        android:backgroundTint="#90B1B4C8"
         android:outlineSpotShadowColor="#B528CD"
         app:layout_constraintTop_toTopOf="parent"
         >
@@ -31,8 +31,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:src="@drawable/ic_baseline_search_24"
-            android:background="#19D621"
-            android:backgroundTint="#19D621"/>
+            android:background="#90B1B4C8"
+            android:backgroundTint="#90B1B4C8"/>
 
         <EditText
             android:id="@+id/my_search"
@@ -50,8 +50,9 @@
         android:id="@+id/bottomNavi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#19D621"
-        android:backgroundTint="#19D621"
+        android:background="#90B1B4C8"
+        android:backgroundTint="#90B1B4C8"
+        app:elevation="0dp"
         app:itemIconTint="#000000"
         app:itemTextColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
