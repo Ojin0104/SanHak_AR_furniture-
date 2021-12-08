@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,24 +17,30 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 public class Login extends Fragment implements GoogleApiClient.OnConnectionFailedListener {
+    private static final String TAG = "GoogleFragment";
     private View view;
     private SignInButton signInButton;      //구글 로그인 버튼
     private FirebaseAuth auth;              //파이어베이스 인증갯체
     private GoogleApiClient googleApiClient;//구글 API 클라이언트 객체
+    private GoogleSignInClient googleSignInClient;
     private static final int REQ_GOOGLE=100;//구글 로그인 결과코드
     private FragmentTransaction ft;
     private FragmentManager fm;
@@ -45,15 +52,22 @@ public class Login extends Fragment implements GoogleApiClient.OnConnectionFaile
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_login,container, false);
 
+        return view;
+    }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)  //sign in 버튼이 눌릴떄 옵션세팅
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
-        googleApiClient=new GoogleApiClient.Builder(getContext())
-                .enableAutoManage(getActivity(),this)
-                .addApi(Auth.GOOGLE_SIGN_IN_API,googleSignInOptions)
-                .build();
+        googleSignInClient= GoogleSignIn.getClient(requireContext(),googleSignInOptions);
+
+//        googleApiClient=new GoogleApiClient.Builder(getContext())
+//                .enableAutoManage(getActivity(),this)
+//                .addApi(Auth.GOOGLE_SIGN_IN_API,googleSignInOptions)
+//                .build();
 
         auth=FirebaseAuth.getInstance();//파이어베이스 인증 객체 초기화
 
@@ -61,32 +75,47 @@ public class Login extends Fragment implements GoogleApiClient.OnConnectionFaile
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
+                //Intent intent =Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
+                Intent intent=googleSignInClient.getSignInIntent();
                 startActivityForResult(intent,REQ_GOOGLE);
             }
         });
 
-
-        return view;
     }
+
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         if(requestCode==REQ_GOOGLE){
-            GoogleSignInResult result=Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-            if(result.isSuccess()==true){ //인증결과가 성공이면
-                GoogleSignInAccount account =result.getSignInAccount(); //닉네임 이메일주소 등등 모든 정보가 담긴 객체
-                resultLogin(account);                                   //로그인 결과값 출력 메소드
-            }
-            else{
-                Toast.makeText(getContext(),"연결실패1",Toast.LENGTH_LONG).show();
-            }
+            Task<GoogleSignInAccount> task=GoogleSignIn.getSignedInAccountFromIntent(data);
+              //  GoogleSignInResult result=Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+                try {
+                    GoogleSignInAccount account = task.getResult(ApiException.class);
+                    Toast.makeText(getContext(),"연결성공1",Toast.LENGTH_LONG).show();
+                    Log.d(TAG, "firebaseAuthWithGoogle:" + account.getId());
+                    resultLogin(account);
+                }
+                 catch (ApiException e) {
+                    // Google Sign In failed, update UI appropriately
+                     Toast.makeText(getContext(),"연결실패1",Toast.LENGTH_LONG).show();
+                    Log.w(TAG, "Google sign in failed", e);
+
+                    }
+                }
+//            if(result.isSuccess()==true){ //인증결과가 성공이면
+//                GoogleSignInAccount account =result.getSignInAccount(); //닉네임 이메일주소 등등 모든 정보가 담긴 객체
+//                resultLogin(account);                                   //로그인 결과값 출력 메소드
+//            }
+//            else{
+//                Toast.makeText(getContext(),"연결실패1",Toast.LENGTH_LONG).show();
+//            }
         }
 
 
-    }
+
 
     private void resultLogin(GoogleSignInAccount account) {
         AuthCredential credential= GoogleAuthProvider.getCredential(account.getIdToken(),null);
@@ -99,7 +128,7 @@ public class Login extends Fragment implements GoogleApiClient.OnConnectionFaile
 
                             Bundle bundle =new Bundle();
                             bundle.putString("name",account.getDisplayName());
-                            LoginResult loginr=new LoginResult();
+                            Login loginr=new Login();
                             ft= getActivity().getSupportFragmentManager().beginTransaction();
                             loginr.setArguments(bundle);
                             ft.replace(R.id.main_frame,loginr);

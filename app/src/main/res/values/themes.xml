@@ -22,10 +22,4 @@
     <style name="AppTheme.OverFlow" parent="Widget.AppCompat.ActionButton.Overflow">
         <item name="android:tint">#fff</item>
     </style>
-    <style name="Theme.SanHak.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-    <style name="Theme.SanHak.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-    <style name="Theme.SanHak.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -8,3 +8,10 @@ dependencyResolutionManagement {
 }
 rootProject.name = "SanHak"
 include ':app'
+
+// Add these lines:
+include ':sceneform'
+project(':sceneform').projectDir=new File('sceneformsrc/sceneform')
+
+include ':sceneformux'
+project(':sceneformux').projectDir=new File('sceneformux/ux')

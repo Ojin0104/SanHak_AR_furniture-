@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
         setFrag(0);
 
 
-
     }
 
     private void setFrag(int n){
