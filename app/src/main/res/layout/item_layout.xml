@@ -53,87 +53,80 @@
             app:layout_constraintTop_toBottomOf="@+id/item_name" />
 
         <TextView
-            android:id="@+id/item_link1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="10dp"
-            android:text="링크"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toStartOf="@+id/item_price1"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
             android:id="@+id/item_price1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
 
-            android:layout_marginStart="50dp"
-
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="179dp"
             android:text="가격"
             android:textSize="20dp"
-            app:layout_constraintStart_toEndOf="@+id/item_link1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_page"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/item_link2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="10dp"
-            android:text="링크"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toStartOf="@+id/item_price1"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/item_link1" />
 
         <TextView
             android:id="@+id/item_price2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
 
-            android:layout_marginStart="48dp"
-
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="179dp"
             android:text="가격"
             android:textSize="20dp"
-            app:layout_constraintStart_toEndOf="@+id/item_link1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_page2"
             app:layout_constraintTop_toBottomOf="@+id/item_price1" />
 
         <TextView
-            android:id="@+id/item_link3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="10dp"
-            android:text="링크"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toStartOf="@+id/item_price1"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/item_link2" />
-
-        <TextView
             android:id="@+id/item_price3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginStart="48dp"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
 
             android:layout_marginTop="15dp"
+            android:layout_marginEnd="179dp"
             android:text="가격"
             android:textSize="20dp"
-            app:layout_constraintStart_toEndOf="@+id/item_link1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_page3"
             app:layout_constraintTop_toBottomOf="@+id/item_price2" />
+
+        <ImageView
+            android:id="@+id/btn_page"
+            android:layout_width="30dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/item_price1"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/page" />
+
+        <ImageView
+            android:id="@+id/btn_page2"
+            android:layout_width="30dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/item_price2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/btn_page"
+            app:srcCompat="@drawable/page" />
+
+        <ImageView
+            android:id="@+id/btn_page3"
+            android:layout_width="30dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/item_price3"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/btn_page2"
+            app:srcCompat="@drawable/page" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

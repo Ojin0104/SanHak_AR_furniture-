@@ -11,7 +11,7 @@
 
     <TextView
         android:id="@+id/fur_name"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
         android:text="가구정보"
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
-        android:layout_marginBottom="47dp"
+        android:layout_marginBottom="15dp"
         android:text="TextView"
         android:layout_gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/fur_color"
@@ -46,24 +46,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="14dp"
-        android:layout_marginBottom="37dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/fur_link"
+        app:layout_constraintBottom_toTopOf="@+id/fur_price"
         app:layout_constraintTop_toBottomOf="@+id/fur_brand"
         tools:layout_editor_absoluteX="176dp" />
 
     <TextView
-        android:id="@+id/fur_link"
+        android:id="@+id/fur_price"
         android:layout_width="wrap_content"
         android:layout_height="31dp"
         android:layout_gravity="center"
-        android:layout_marginTop="14dp"
-        android:layout_marginBottom="241dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fur_color"
         tools:layout_editor_absoluteX="176dp" />
+
+    <Button
+        android:id="@+id/btn_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="바로 가기"
+        android:backgroundTint="#90B1B4C8"/>
 
 
 </LinearLayout>
