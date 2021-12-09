@@ -19,9 +19,6 @@ import com.google.android.ads.mediationtestsuite.viewmodels.ItemViewHolder;
 import com.google.firebase.database.core.Context;
 
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.ArrayList;

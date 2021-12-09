@@ -127,14 +127,14 @@ public class MyMain extends Fragment {
 //                startActivity(intent);
             }
         });
-        arTest = view.findViewById(R.id.arTest);
-        arTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), GltfActivity.class);
-                startActivity(intent);
-            }
-        });
+//        arTest = view.findViewById(R.id.arTest);
+//        arTest.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getActivity(), GltfActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
 

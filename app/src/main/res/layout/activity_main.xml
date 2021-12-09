@@ -25,22 +25,9 @@
 
         </TextView>
 
-        <ImageButton
-            android:id="@+id/btn_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:src="@drawable/ic_baseline_search_24"
-            android:background="#90B1B4C8"
-            android:backgroundTint="#90B1B4C8"/>
 
-        <EditText
-            android:id="@+id/my_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:ems="13"
-            android:text="검색" />
+
+
 
 
     </androidx.appcompat.widget.Toolbar>
@@ -65,9 +52,10 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="1.0">
 
     </FrameLayout>
 
