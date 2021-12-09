@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private MyList myList;
     private MyPage myPage;
     private MyMain myMain;
-
+    public static boolean firstFlag=true;
 
 
 
@@ -34,8 +34,14 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent(MainActivity.this, LoadingActivity.class);
-        startActivity(intent);
+        if(firstFlag) {
+            Intent intent = new Intent(MainActivity.this, LoadingActivity.class);
+            startActivity(intent);
+            firstFlag=false;
+        }
+
+
+
 
         bottomNavigationView = findViewById(R.id.bottomNavi);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

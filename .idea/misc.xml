@@ -20,17 +20,23 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.121875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/drawable-v24/loading.xml" value="0.121875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/drawable/ic_launcher_background.xml" value="0.121875" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/activity_furniture_info.xml" value="0.109375" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/activity_furniture_info.xml" value="0.16799999999999998" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/activity_item_filter.xml" value="0.536" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/activity_loading.xml" value="0.1296875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/activity_login.xml" value="0.16893115942028986" />
+<<<<<<< HEAD
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/activity_main.xml" value="0.1296875" />
+=======
+        <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/activity_login_result.xml" value="0.221875" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/activity_main.xml" value="0.4" />
+>>>>>>> ceaf9ba0104c91ae623eb7b0a52d7d9834693fed
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/activity_my_brand.xml" value="0.12604166666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/activity_my_list.xml" value="0.12604166666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/activity_my_main.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/activity_my_page.xml" value="0.12604166666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/activity_recycler_select_item.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/activity_shop.xml" value="0.264" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/activity_ux.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/content_login.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/fragment_login.xml" value="0.17527173913043478" />
 <<<<<<< HEAD
@@ -39,12 +45,17 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/item_layout.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/item_typeselector.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/itme_typeselector.xml" value="0.1" />
+<<<<<<< HEAD
 >>>>>>> a1a56ac9e55c67e4c754ca82288aa8c5bc4d5292
 =======
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/item_layout.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/item_typeselector.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/itme_typeselector.xml" value="0.1" />
 >>>>>>> aefca9ef895ecdf3224a8e520a5d9c3665925093
+=======
+        <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/layout/tiger_card_view.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SanHak_AR_furniture-/app/src/main/res/menu/bottom_menu.xml" value="0.18854166666666666" />
+>>>>>>> ceaf9ba0104c91ae623eb7b0a52d7d9834693fed
         <entry key="..\:/andoridApp/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.12916666666666668" />
         <entry key="..\:/andoridApp/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/andoridApp/app/src/main/res/layout/activity_main2.xml" value="0.11302083333333333" />
