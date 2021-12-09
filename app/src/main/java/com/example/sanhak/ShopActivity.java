@@ -12,11 +12,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,6 +31,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Document;
+
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class ShopActivity extends Fragment implements ItemClickListener{
@@ -35,7 +43,7 @@ public class ShopActivity extends Fragment implements ItemClickListener{
     private static  String COLOR_GREEN="초록색";
     private static  String COLOR_WHITE="하얀색";
 
-
+    ///////////////////////////////
     private FirebaseDatabase mDatabase;
     private DatabaseReference databaseReference;
    private ArrayList<Item> arrayList=new ArrayList<>();
@@ -44,8 +52,6 @@ public class ShopActivity extends Fragment implements ItemClickListener{
     public RecyclerView.Adapter adapter;
     //private static GetItemDB db = null;
     public Context mContext;
-
-
 
 
     private RecyclerView recyclerView;
@@ -68,6 +74,7 @@ private View view;
             System.out.println("-----------------------------");
             System.out.println(fur_type);
         }
+
 
 
         mDatabase = FirebaseDatabase.getInstance();
@@ -96,7 +103,6 @@ private View view;
 
 
         });
-
 
         showTypeSelector();//색깔필터표시
         showProduct();//종류별로 상품나오게
@@ -162,16 +168,22 @@ private View view;
 
 
 @Override
-    public void onItemClick2(View v, int position) {//filter 클릭시 그에맞는 product show
+    public void onItemClick2(View v, int position) {// 클릭시 그에맞는 product show
+
+
         String name = arrayList.get(position).getName();
         String img = arrayList.get(position).getImg();
         String color = arrayList.get(position).getColor();
         String brand=arrayList.get(position).getBrand();
+        String gurl=arrayList.get(position).getUrl();
+        String price=arrayList.get(position).getPrice();
         Bundle bundle=new Bundle();//번들로 이름 저장후
         bundle.putString("name",name);
         bundle.putString("img",img);
         bundle.putString("color",color);
         bundle.putString("brand",brand);
+        bundle.putString("url",gurl);
+        bundle.putString("price",price);
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
         FurnitureInfo fur= new FurnitureInfo();
         fur.setArguments(bundle);
@@ -182,7 +194,38 @@ private View view;
         transaction.commit();
         }
 
+    @Override
+    public void onItemClick3(View v, int position) {// 클릭시 그에맞는 링크이동
 
+
+                Intent urlintent=new Intent(Intent.ACTION_VIEW, Uri.parse(arrayList.get(position).getUrl()));
+                urlintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                v.getContext().startActivity(urlintent);
+
+
+
+    }
+
+    @Override
+    public void onItemClick4(View v, int position) {// 클릭시 그에맞는 링크이동
+
+        Intent urlintent=new Intent(Intent.ACTION_VIEW, Uri.parse(arrayList.get(position).getUrl1()));
+        urlintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        v.getContext().startActivity(urlintent);
+
+
+
+    }
+    @Override
+    public void onItemClick5(View v, int position) {// 클릭시 그에맞는 링크이동
+
+        Intent urlintent=new Intent(Intent.ACTION_VIEW, Uri.parse(arrayList.get(position).getUrl2()));
+        urlintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        v.getContext().startActivity(urlintent);
+
+
+
+    }
 
     public ArrayList<Item> GetCOLORList(String color){//색깔에 맞는 데이터 colorList로 전달
         for(int i=0; i<arrayList.size();i++){
