@@ -6,12 +6,16 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
+
+
 public class LoadingActivity extends AppCompatActivity {
 
+    private int first;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading);
+
         startLoading();
     }
 

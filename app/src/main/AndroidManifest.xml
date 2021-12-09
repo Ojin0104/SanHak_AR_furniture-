@@ -41,6 +41,10 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+
         <meta-data android:name="com.google.ar.core" android:value="required" />
 
         <activity
