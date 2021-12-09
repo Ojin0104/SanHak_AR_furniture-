@@ -1,0 +1,25 @@
+# Blender MTL File: 'NILSOLLE stool.blend'
+# Material Count: 2
+
+newmtl Metal
+Ns 650.249991
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Wood
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Program Files (x86)\\Blender Foundation\\Blender\\Модели\\My models\\IKEA apartment\\textures\\Wood_nrm.png
+map_Kd C:\\Program Files (x86)\\Blender Foundation\\Blender\\Модели\\My models\\IKEA apartment\\textures\\Wood_diff.png
+map_Ns C:\\Program Files (x86)\\Blender Foundation\\Blender\\Модели\\My models\\IKEA apartment\\textures\\Wood_rough.png

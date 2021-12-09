@@ -59,9 +59,15 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.15.0'
 }
 apply plugin: 'com.google.gms.google-services'
 
-dependencies {
-    api project(":sceneformux")
-}
+
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+sceneform.asset('sampledata/nILSOLLEstool.obj',	// 사용하고자 하는 3D 객체 파일의 경로
+        'default',				// 재질(Material) 경로
+        'sampledata/nILSOLLEstool.sfa',		// sfa 파일의 출력 경로
+        'src/main/res/raw/nilsollestool')		// sfb 파일의 출력 경로
+
